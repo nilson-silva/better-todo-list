@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href=" /style.css">
+  
+    <title>Logica de Programação </title>
+</head>
+<body>
+     <h1 class="title">Better Todo List  </h1>
+          <p class="subtitle">
+            Meu primeiro site usando <strong>Bulma</strong>!
+          </p>
+        <div class="main">
+          <div class="container">
+            <div class="menu">
+                <div class="textMenu">
+                    <div class="form-inline">
+                  
+                   <input class="input is-link" type="text" id="item" placeholder="Item">
+                   <button class="button is-success" onclick="adicionar()" id="btnMenu">Click</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div id="app"></div>      
+    <script>
+
+         var itens = [];
+         function adicionar() {
+            var inputElement = document.querySelector("#item").value;
+            itens.push(inputElement);
+            document.querySelector('#app').innerHTML = list(itens).outerHTML;
+         }
+    
+         function list(array) {
+            //Cria a lista do elemento
+            var listElement = document.createElement("ul");
+    
+            for (var i = 0; i < array.length; i++) {
+                //Cria a lista de item
+                let divElement = document.createElement('div');
+                divElement.className="card"
+                var itemElement = document.createElement('li');
+                
+                //Defini seu conteudo
+                divElement.appendChild(document.createTextNode(array[i]));
+                itemElement.appendChild(divElement);
+    
+                //Adiciona um item a lista
+                listElement.appendChild(itemElement);
+            }
+            return listElement;
+         }
+
+        
+    </script>
+    
+    
+ 
+    
+</body>
+</html>

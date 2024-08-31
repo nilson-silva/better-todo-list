@@ -1,0 +1,27 @@
+.menu{
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.textMenu{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    
+}
+
+.card{
+    font-size: 50px;
+    padding: 20px;
+    font-size: 40px;
+}
+#item{
+    width: 100px;
+}
+.title{
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+}
